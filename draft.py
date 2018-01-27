@@ -1,3 +1,4 @@
+#cm
 
 import cx_Oracle
 
@@ -17,6 +18,8 @@ str_where = sql_str[v_where+6:]
 for a in str_select.split(','):
     k,v = a.strip().split('.')
     print(k,v)
+
+    https://github.com/MysteriousCoyote/Select-Insert/blob/22ff529cec320f1b7162a47fb61db77cfe1c77bb/draft.py#L11
 
 
 #d_t1 = dict(zip(  [str_from],[]   )   )
