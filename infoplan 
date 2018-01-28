@@ -1,0 +1,17 @@
+algorithm:
+
+- initial sql parsing. extract table names and all columns
+- create mapping dictionary that will hold table - columns mapping
+- create new sql. Modify initial sql to add missing columns in select part
+- run new sql to retrieve data
+- store values marking them table-column-value
+...
+
+
+
+methods:
+
+
+1) change initial query
+2) connect to oracle and run
+...

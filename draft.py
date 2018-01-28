@@ -4,7 +4,7 @@ connection_string = 'eldar/eldar@192.168.1.12/orcl'
 user = 'eldar'
 pas = 'eldar'
 tns = cx_Oracle.makedsn('192.168.1.12','1521','orcl')
-print(tns)
+#print(tns)
 
 sql_str = '''select  t1.data , t2.data
 from t1,t2
@@ -47,8 +47,11 @@ connection = cx_Oracle.connect(connection_string)
 cursor = connection.cursor()
 #print(connection.version)
 cursor.execute(sql_str)
-
 for a in cursor:
     print(a[0],a[1])
+
+header = [i[0] for i in cursor.description]
+print(header)
+
 cursor.close()
 connection.close()
