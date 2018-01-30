@@ -18,19 +18,26 @@ str_from = sql_str[v_from+5:v_where]
 str_where = sql_str[v_where+6:]
 
 
-mapping_dict = {}
+
+#why this deosnt work ?
+##mapping_dict2 = dict.fromkeys([tables for tables in str_from.strip().split(',')],[])
+#so I have to use this
+mapping_dict = dict()
 
 for tables in str_from.strip().split(','):
     mapping_dict[tables] = []
+
 
 for columns in str_select.split(','):
     k,v = columns.strip().split('.')
     #mapping_dict.setdefault(k,[v
     mapping_dict[k].append(v)
 
+
 for wheres in str_where.split('='):
     k,v = wheres.strip().split('.')
     mapping_dict[k].append(v)
+
 
 print(mapping_dict)
 #mapping_dict = dict(zip(  [str_from],[]   )   )
