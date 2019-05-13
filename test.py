@@ -1,10 +1,10 @@
 import cx_Oracle
 from sys import modules
 
-tns_names = cx_Oracle.makedsn('orcl11-aws.c0ivdp1t5vqz.us-east-1.rds.amazonaws.com',1521,'ORCL')
+tns_names = cx_Oracle.makedsn('',1521,'ORCL')
 print(tns_names)
 
-db = cx_Oracle.connect('admin','Admin14!',tns_names)
+db = cx_Oracle.connect('','',tns_names)
 
 cursor = db.cursor()
 
